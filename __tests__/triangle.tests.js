@@ -1,4 +1,4 @@
-import Triangle from './../src/triangle.js';
+import Triangle from '../js/triangle.js';
 
 describe('Triangle', () => {
 

@@ -10,13 +10,16 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: './dist'
+    index: 'index.html',
+    contentBase: './dist',
+    writeToDisk:true                            //NEW LINE
   },
   devtool: 'eval-source-map',
   plugins: [
     new ESLintPlugin(),
     new CleanWebpackPlugin({
-      verbose: true
+      verbose: true,
+      cleanStaleWebpackAssets: false            //NEW LINE
     }),
     new HtmlWebpackPlugin({
       title: 'Shape Tracker',
